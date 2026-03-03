@@ -1,0 +1,6 @@
+/*Responsividade*/
+@media screen and (max-width: 768px) {
+    .Cadastro{
+        width: 90%;
+    }
+}
