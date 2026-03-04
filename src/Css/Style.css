@@ -1,6 +1,18 @@
+.Home{
+    background-image: url(../Img/background2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
 /*Responsividade*/
 @media screen and (max-width: 768px) {
     .Cadastro{
         width: 90%;
+    }
+    .Busca{
+        width: 45%;
+    }
+    h1{
+        font-size: 1.4rem;
     }
 }
