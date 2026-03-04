@@ -8,7 +8,7 @@ function Cadastro() {
     const[error, setError] = useState(false);
 
     function Cadastrar() {
-        if(userName === "") {
+        if(userName === "" || email === "" || password === "") {
             setError(true);
             return
         }

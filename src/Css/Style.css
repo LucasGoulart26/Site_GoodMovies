@@ -1,5 +1,5 @@
 .Home{
-    background-image: url(../Img/background2.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url(../Img/background2.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -14,5 +14,18 @@
     }
     h1{
         font-size: 1.4rem;
+    }
+    .Barra{
+        width: 75%;
+    }
+    .Barra button{
+        width: 100%;
+    }
+    .Home{
+        flex-direction: column;
+    }
+    .Home img{
+        width: 75%;
+        height: 57vh;
     }
 }
