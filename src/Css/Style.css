@@ -4,9 +4,15 @@
     background-size: cover;
 }
 
+.Cadastro{
+    background-image: url(../Img/background-login.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
 /*Responsividade*/
 @media screen and (max-width: 768px) {
-    .Cadastro{
+    .Card{
         width: 90%;
     }
     .Busca{
