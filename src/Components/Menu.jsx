@@ -3,7 +3,7 @@ import "../Css/Style.css"
 
 function Menu() {
     return (
-      <div className="w-full h-16 p-3 flex items-center justify-between bg-transparent backdrop-blur-2xl absolute">
+      <div className="w-full h-16 p-3 flex items-center justify-between bg-transparent backdrop-blur-2xl fixed">
         <h1 className="text-3xl text-emerald-500">
           <Link to="/">Good Movies</Link>
         </h1>

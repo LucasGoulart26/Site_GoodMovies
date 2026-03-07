@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Filmes from "../Components/Filmes";
 import Capa from "../Img/capa-do-filme.jpg";
 import "../Css/Style.css";
 
@@ -17,19 +18,22 @@ function Home() {
         return estrelas;
     };
     return (
-        <div className="Home w-full h-screen flex items-center justify-center gap-3">
-            <img src={Capa} alt="Capa" className="w-79 h-[60vh] bg-gray-50" />
-            <div className="Barra w-[33%] flex items-start justify-items-start flex-col">
-                <h1 className="text-4xl text-white">Demon Slayer: Kimetsu no Yaiba - Castelo Infinito</h1>
-                <h2 className="text-2xl text-white mt-2">2025 - Ação/Animação</h2>
-                <div className="w-full flex items-start justify-items-start gap-2 mt-2">
-                    <p className="text-2xl text-white">Avaliação: {estrelasAvaliacao(avaliacao)}</p>
-                </div>
-                <div className="w-full flex items-start justify-items-start gap-2 mt-2">
-                    <button className="w-40 p-2 cursor-pointer text-emerald-500 bg-zinc-800 rounded-[5px] active:bg-zinc-900 transition-all duration-200">ASSISTIR</button>
-                </div>
+      <div className="Home">
+        <div className="w-full h-screen flex items-center justify-center gap-3">
+          <img src={Capa} alt="Capa" className="w-79 h-[60vh] bg-gray-50" />
+          <div className="Barra w-[33%] flex items-start justify-items-start flex-col">
+            <h1 className="text-4xl text-white">Demon Slayer: Kimetsu no Yaiba - Castelo Infinito</h1>
+            <h2 className="text-2xl text-white mt-2">2025 - Ação/Animação</h2>
+            <div className="w-full flex items-start justify-items-start gap-2 mt-2">
+              <p className="text-2xl text-white">Avaliação: {estrelasAvaliacao(avaliacao)}</p>
             </div>
+            <div className="w-full flex items-start justify-items-start gap-2 mt-2">
+              <button className="w-40 p-2 cursor-pointer text-emerald-500 bg-zinc-800 rounded-[5px] active:bg-zinc-900 transition-all duration-200">ASSISTIR</button>
+            </div>
+          </div>
         </div>
+        <Filmes />
+      </div>
     );
 }
 
