@@ -18,7 +18,7 @@ function Home() {
         return estrelas;
     };
     return (
-      <div className="Home">
+      <div className="Home w-full h-screen">
         <div className="w-full h-screen flex items-center justify-center gap-3">
           <img src={Capa} alt="Capa" className="w-79 h-[60vh] bg-gray-50" />
           <div className="Barra w-[33%] flex items-start justify-items-start flex-col">

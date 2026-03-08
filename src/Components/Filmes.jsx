@@ -1,4 +1,5 @@
 import { useState } from "react";
+import capaFilme from "../Img/capa-filme.jpg";
 
 function Filmes() {
     const[avaliacao] = useState(5)
@@ -16,17 +17,23 @@ function Filmes() {
     }
 
     // Filmes
-    //const filmes = [
-    //    {
-    //        id: 1,
-    //        year: "2020",
-    //        gener: "Ação, Drama",
-    //        capa: '../Img/Capa_do_filme.jpg'
-    //    }
-    //]
+    const filmes = [
+        {
+            id: 1,
+            year: "2020",
+            gener: "Ação, Drama",
+            capa: capaFilme
+        },
+        {
+            id: 2,
+            year: "2023",
+            gener: "Drama, Ficção",
+            capa: capaFilme
+        }
+    ]
     return (
       <div className="w-full bg-zinc-800">
-        <div className="w-full h-20 bg-zinc-900 flex items-center justify-center gap-2">
+        <div className="w-full h-20 bg-zinc-900 flex items-center justify-center gap-4">
           <button className="w-24 p-3 rounded-2xl bg-emerald-500 cursor-pointer">All</button>
           <button className="w-24 p-3 rounded-2xl bg-zinc-800 cursor-pointer text-white">Ação</button>
           <button className="w-24 p-3 rounded-2xl bg-zinc-800 cursor-pointer text-white">Aventura</button>
@@ -35,17 +42,19 @@ function Filmes() {
           <button className="w-24 p-3 rounded-2xl bg-zinc-800 cursor-pointer text-white">Animação</button>
           <button className="w-24 p-3 rounded-2xl bg-zinc-800 cursor-pointer text-white">Drama</button>
         </div>
-        <div className="w-full p-5 flex items-start justify-items-start flex-wrap gap-2">
-            <div className="w-[25%] rounded-2xl bg-zinc-700 hover:shadow-2xl transition-all duration-200">
-                <img src="" alt="" className="w-full h-96 bg-zinc-300"/>
-                <div className="p-3">
-                    <div className="w-full flex items-center justify-between">
-                        <p className="text-white">Ano</p>
-                        <p className="text-white">Gênero</p>
+        <div className="w-full p-5 flex items-start justify-items-start flex-wrap gap-4">
+            {filmes.map((filmes) => (
+                <div key={filmes.id} className="w-[25%] rounded-2xl bg-zinc-900 hover:shadow-2xl transition-all duration-200">
+                    <img src={filmes.capa} alt="Capa" className="w-full h-96 bg-zinc-300"/>
+                    <div className="p-3">
+                        <div className="w-full flex items-center justify-between">
+                            <p className="text-white">{filmes.year}</p>
+                            <p className="text-white">{filmes.gener}</p>
+                        </div>
+                        <p className=" text-white">Avaliação: {estrelasAvaliacao(avaliacao)}</p>
                     </div>
-                    <p className=" text-white">Avaliação: {estrelasAvaliacao(avaliacao)}</p>
                 </div>
-            </div>
+            ))}
         </div>
       </div>
     );
