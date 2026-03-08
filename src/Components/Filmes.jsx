@@ -3,6 +3,9 @@ import capaFilme from "../Img/Capas/capa-filme.jpg";
 import capaFilme2 from "../Img/Capas/capa-filme2.jpg";
 import capaFilme3 from "../Img/Capas/capa-filme3.jpg";
 import capaFilme4 from "../Img/Capas/capa-filme4.jpg";
+import capaFilme5 from "../Img/Capas/capa-filme5.jpg";
+import capaFilme6 from "../Img/Capas/capa-filme6.jpg";
+import capaFilme7 from "../Img/Capas/capa-filme7.jpeg";
 import "../Css/Style.css";
 
 function Filmes() {
@@ -25,7 +28,10 @@ function Filmes() {
         {id: 1, ano: "2022", genero: "Ficção cientifica/Ação", capa: capaFilme},
         {id: 2, ano: "2025", genero: "Animação", capa: capaFilme2},
         {id: 3, ano: "2025", genero: "Animação/Terror", capa: capaFilme3},
-        {id: 4, ano: "2025", genero: "Ficção cientifica/Ação", capa: capaFilme4}
+        {id: 4, ano: "2025", genero: "Ficção cientifica/Ação", capa: capaFilme4},
+        {id: 5, ano: "2024", genero: "Ação", capa: capaFilme5},
+        {id: 6, ano: "2024", genero: "Terror", capa: capaFilme6},
+        {id: 7, ano: "2022", genero: "Ficção cientifica/Ação", capa: capaFilme7}
     ]
     return (
       <div className="w-full bg-zinc-800">
@@ -43,7 +49,7 @@ function Filmes() {
                 <h1 className="text-3xl text-emerald-500">Filmes</h1>
             </div>
             {filmes.map((filmes) => (
-                <div key={filmes.id} className="CardFilme w-[24%] rounded-2xl bg-zinc-900 hover:shadow-2xl transition-all duration-200">
+                <div key={filmes.id} className="CardFilme w-[24%] rounded-2xl bg-zinc-900 hover:shadow-2xl shadow-emerald-500 transition-all duration-300 ">
                     <img src={filmes.capa} alt="Capa" className="w-full h-96 bg-zinc-300"/>
                     <div className="p-3">
                         <div className="w-full flex items-center justify-between">
