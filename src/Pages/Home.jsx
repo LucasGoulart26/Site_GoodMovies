@@ -18,8 +18,8 @@ function Home() {
         return estrelas;
     };
     return (
-      <div className="Home w-full h-screen">
-        <div className="w-full h-screen flex items-center justify-center gap-3">
+      <div className="w-full h-screen">
+        <div className="Home w-full h-screen flex items-center justify-center gap-3">
           <img src={Capa} alt="Capa" className="w-79 h-[60vh] bg-gray-50" />
           <div className="Barra w-[33%] flex items-start justify-items-start flex-col">
             <h1 className="text-4xl text-white">Demon Slayer: Kimetsu no Yaiba - Castelo Infinito</h1>

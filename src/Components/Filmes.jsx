@@ -1,5 +1,9 @@
 import { useState } from "react";
-import capaFilme from "../Img/capa-filme.jpg";
+import capaFilme from "../Img/Capas/capa-filme.jpg";
+import capaFilme2 from "../Img/Capas/capa-filme2.jpg";
+import capaFilme3 from "../Img/Capas/capa-filme3.jpg";
+import capaFilme4 from "../Img/Capas/capa-filme4.jpg";
+import "../Css/Style.css";
 
 function Filmes() {
     const[avaliacao] = useState(5)
@@ -18,18 +22,10 @@ function Filmes() {
 
     // Filmes
     const filmes = [
-        {
-            id: 1,
-            year: "2020",
-            gener: "Ação, Drama",
-            capa: capaFilme
-        },
-        {
-            id: 2,
-            year: "2023",
-            gener: "Drama, Ficção",
-            capa: capaFilme
-        }
+        {id: 1, ano: "2022", genero: "Ficção cientifica/Ação", capa: capaFilme},
+        {id: 2, ano: "2025", genero: "Animação", capa: capaFilme2},
+        {id: 3, ano: "2025", genero: "Animação/Terror", capa: capaFilme3},
+        {id: 4, ano: "2025", genero: "Ficção cientifica/Ação", capa: capaFilme4}
     ]
     return (
       <div className="w-full bg-zinc-800">
@@ -43,13 +39,16 @@ function Filmes() {
           <button className="w-24 p-3 rounded-2xl bg-zinc-800 cursor-pointer text-white">Drama</button>
         </div>
         <div className="w-full p-5 flex items-start justify-items-start flex-wrap gap-4">
+            <div className="w-full p-2">
+                <h1 className="text-3xl text-emerald-500">Filmes</h1>
+            </div>
             {filmes.map((filmes) => (
-                <div key={filmes.id} className="w-[25%] rounded-2xl bg-zinc-900 hover:shadow-2xl transition-all duration-200">
+                <div key={filmes.id} className="CardFilme w-[24%] rounded-2xl bg-zinc-900 hover:shadow-2xl transition-all duration-200">
                     <img src={filmes.capa} alt="Capa" className="w-full h-96 bg-zinc-300"/>
                     <div className="p-3">
                         <div className="w-full flex items-center justify-between">
-                            <p className="text-white">{filmes.year}</p>
-                            <p className="text-white">{filmes.gener}</p>
+                            <p className="text-white">{filmes.ano}</p>
+                            <p className="text-white">{filmes.genero}</p>
                         </div>
                         <p className=" text-white">Avaliação: {estrelasAvaliacao(avaliacao)}</p>
                     </div>
