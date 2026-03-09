@@ -6,6 +6,7 @@ import capaFilme4 from "../Img/Capas/capa-filme4.jpg";
 import capaFilme5 from "../Img/Capas/capa-filme5.jpg";
 import capaFilme6 from "../Img/Capas/capa-filme6.jpg";
 import capaFilme7 from "../Img/Capas/capa-filme7.jpeg";
+import capaFilme8 from "../Img/Capas/capa-filme8.jpg";
 import "../Css/Style.css";
 
 function Filmes() {
@@ -31,7 +32,8 @@ function Filmes() {
         {id: 4, ano: "2025", genero: "Ficção cientifica/Ação", capa: capaFilme4},
         {id: 5, ano: "2024", genero: "Ação", capa: capaFilme5},
         {id: 6, ano: "2024", genero: "Terror", capa: capaFilme6},
-        {id: 7, ano: "2022", genero: "Ficção cientifica/Ação", capa: capaFilme7}
+        {id: 7, ano: "2022", genero: "Ficção cientifica/Ação", capa: capaFilme7},
+        {id: 8, ano: "2026", genero: "Terror", capa: capaFilme8}
     ]
     return (
       <div className="w-full bg-zinc-800">
@@ -60,6 +62,9 @@ function Filmes() {
                     </div>
                 </div>
             ))}
+        </div>
+        <div className="w-full h-20 flex items-center justify-center bg-zinc-900">
+            <h1 className="text-2xl text-emerald-500">&copy;2026 - GoodMovies</h1>
         </div>
       </div>
     );

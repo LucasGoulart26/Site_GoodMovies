@@ -37,4 +37,7 @@
     .CardFilme{
         width: 100%;
     }
+    #titulo{
+        display: none;
+    }
 }
