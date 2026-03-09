@@ -16,9 +16,9 @@ function Filmes() {
         const estrelas = [];
         for(let i = 1; i <= 5; i++) {
             if(i <= nota) {
-                estrelas.push(<span className="text-2xl text-yellow-400">★</span>);
+                estrelas.push(<span className="text-yellow-400">★</span>);
             }else {
-                estrelas.push(<span className="text-2xl text-yellow-400">☆</span>);
+                estrelas.push(<span className="text-yellow-400">☆</span>);
             }
         }
         return estrelas;
@@ -51,7 +51,7 @@ function Filmes() {
                 <h1 className="text-3xl text-emerald-500">Filmes</h1>
             </div>
             {filmes.map((filmes) => (
-                <div key={filmes.id} className="CardFilme w-[24%] rounded-2xl bg-zinc-900 hover:shadow-2xl shadow-emerald-500 transition-all duration-300 ">
+                <div key={filmes.id} className="CardFilme w-[24%] rounded-2xl bg-zinc-950 hover:shadow-2xl shadow-emerald-500 transition-all duration-300 ">
                     <img src={filmes.capa} alt="Capa" className="w-full h-96 bg-zinc-300"/>
                     <div className="p-3">
                         <div className="w-full flex items-center justify-between">
@@ -63,7 +63,11 @@ function Filmes() {
                 </div>
             ))}
         </div>
-        <div className="w-full h-20 flex items-center justify-center bg-zinc-900">
+        <div className="w-full h-[80vh] flex items-center justify-center flex-col bg-zinc-900">
+            <h1 className="text-4xl text-emerald-500 mb-2">Novo Filme</h1>
+            <div className="w-2xl p-4 rounded-2xl bg-white shadow-2xl"></div>
+        </div>
+        <div className="w-full h-20 flex items-center justify-center bg-zinc-950">
             <h1 className="text-2xl text-emerald-500">&copy;2026 - GoodMovies</h1>
         </div>
       </div>
