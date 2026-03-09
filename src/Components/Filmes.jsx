@@ -11,6 +11,7 @@ import "../Css/Style.css";
 
 function Filmes() {
     const[avaliacao] = useState(5)
+    const[active, setActive] = useState("All");
 
     const estrelasAvaliacao = (nota) => {
         const estrelas = [];
@@ -23,6 +24,8 @@ function Filmes() {
         }
         return estrelas;
     }
+
+    const buttons = ["All", "Ação", "Aventura", "Ficção", "Terror", "Animação", "Drama"];
 
     // Filmes
     const filmes = [
@@ -37,14 +40,14 @@ function Filmes() {
     ]
     return (
       <div className="w-full bg-zinc-800">
-        <div className="w-full h-20 bg-zinc-900 flex items-center justify-center gap-4">
-          <button className="w-24 p-3 rounded-2xl bg-emerald-500 cursor-pointer">All</button>
-          <button className="w-24 p-3 rounded-2xl bg-zinc-800 cursor-pointer text-white">Ação</button>
-          <button className="w-24 p-3 rounded-2xl bg-zinc-800 cursor-pointer text-white">Aventura</button>
-          <button className="w-24 p-3 rounded-2xl bg-zinc-800 cursor-pointer text-white">Ficção</button>
-          <button className="w-24 p-3 rounded-2xl bg-zinc-800 cursor-pointer text-white">Terror</button>
-          <button className="w-24 p-3 rounded-2xl bg-zinc-800 cursor-pointer text-white">Animação</button>
-          <button className="w-24 p-3 rounded-2xl bg-zinc-800 cursor-pointer text-white">Drama</button>
+        <div className="w-full p-5 bg-zinc-900 flex items-center justify-center flex-wrap gap-4">
+            {buttons.map((btn) => (
+                <button 
+                    key={btn} 
+                    onClick={()=> setActive(btn)} 
+                    className={`w-24 p-3 rounded-2xl cursor-pointer text-white ${active === btn ? "bg-emerald-500" : "bg-zinc-800"}`}
+                >{btn}</button>
+            ))}
         </div>
         <div className="w-full p-5 flex items-start justify-items-start flex-wrap gap-4">
             <div className="w-full p-2">
@@ -62,10 +65,6 @@ function Filmes() {
                     </div>
                 </div>
             ))}
-        </div>
-        <div className="w-full h-[80vh] flex items-center justify-center flex-col bg-zinc-900">
-            <h1 className="text-4xl text-emerald-500 mb-2">Novo Filme</h1>
-            <div className="w-2xl p-4 rounded-2xl bg-white shadow-2xl"></div>
         </div>
         <div className="w-full h-20 flex items-center justify-center bg-zinc-950">
             <h1 className="text-2xl text-emerald-500">&copy;2026 - GoodMovies</h1>

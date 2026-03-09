@@ -1,5 +1,4 @@
 # 🍿 Site GoodMovies
-App para vc poder assistir seus filmes favoritos onde vc quiser
 
 ## 🚀 Techs Used
 - React
