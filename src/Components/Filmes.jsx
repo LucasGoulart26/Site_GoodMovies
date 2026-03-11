@@ -13,6 +13,7 @@ function Filmes() {
     const[avaliacao] = useState(5)
     const[active, setActive] = useState("All");
 
+    // Criar estrelas
     const estrelasAvaliacao = (nota) => {
         const estrelas = [];
         for(let i = 1; i <= 5; i++) {
@@ -24,9 +25,6 @@ function Filmes() {
         }
         return estrelas;
     }
-
-    const buttons = ["All", "Ação", "Aventura", "Ficção", "Terror", "Animação", "Drama"];
-
     // Filmes
     const filmes = [
         {id: 1, ano: "2022", genero: "Ficção cientifica/Ação", capa: capaFilme},
@@ -38,6 +36,19 @@ function Filmes() {
         {id: 7, ano: "2022", genero: "Ficção cientifica/Ação", capa: capaFilme7},
         {id: 8, ano: "2026", genero: "Terror", capa: capaFilme8}
     ]
+    const filmesFiltrados = active === "All" 
+        ? filmes 
+        : filmes.filter((filme) => filme.genero.toLowerCase().includes(active.toLowerCase())
+    );
+    const buttons = [
+       "All",
+       "Ação",
+       "Aventura",
+       "Ficção",
+       "Terror",
+       "Animação",
+       "Drama",
+     ];
     return (
       <div className="w-full bg-zinc-800">
         <div className="w-full p-5 bg-zinc-900 flex items-center justify-center flex-wrap gap-4">
@@ -53,13 +64,13 @@ function Filmes() {
             <div className="w-full p-2">
                 <h1 className="text-3xl text-emerald-500">Filmes</h1>
             </div>
-            {filmes.map((filmes) => (
-                <div key={filmes.id} className="CardFilme w-[24%] rounded-2xl bg-zinc-950 hover:shadow-2xl shadow-emerald-500 transition-all duration-300 ">
-                    <img src={filmes.capa} alt="Capa" className="w-full h-96 bg-zinc-300"/>
+            {filmesFiltrados.map((filme) => (
+                <div key={filme.id} className="CardFilme w-[24%] rounded-2xl bg-zinc-950 hover:shadow-2xl shadow-emerald-500 transition-all duration-300 ">
+                    <img src={filme.capa} alt="Capa" className="w-full h-96 bg-zinc-300"/>
                     <div className="p-3">
                         <div className="w-full flex items-center justify-between">
-                            <p className="text-white">{filmes.ano}</p>
-                            <p className="text-white">{filmes.genero}</p>
+                            <p className="text-white">{filme.ano}</p>
+                            <p className="text-white">{filme.genero}</p>
                         </div>
                         <p className=" text-white">Avaliação: {estrelasAvaliacao(avaliacao)}</p>
                     </div>
