@@ -26,7 +26,7 @@ function Cadastro() {
                         type="text" 
                         value={userName}
                         onChange={(e)=> setUserName(e.target.value)}
-                        className={`w-full h-11 p-3 outline-0 rounded-[5px] border-2 border-gray-700 bg-gray-500 text-white ${error && userName === "" ? "border-red-500 transition-all duration-200" : "border-gray-500"}`}
+                        className={`w-full h-11 p-3 outline-0 rounded-[5px] border-2 border-gray-700 bg-gray-500 text-white focus:ring-2 ring-emerald-400 transition-all duration-500 ${error && userName === "" ? "border-red-500 transition-all duration-200" : "border-gray-500"}`}
                     />
                 </div>
                 <div className="w-full flex items-start justify-items-start flex-col mt-2">
@@ -35,7 +35,7 @@ function Cadastro() {
                         type="email" 
                         value={email}
                         onChange={(e)=> setEmail(e.target.value)}
-                        className={`w-full h-11 p-3 outline-0 rounded-[5px] border-2 border-gray-700 bg-gray-500 text-white ${error && email === "" ? "border-red-500 transition-all duration-200" : "border-gray-500"}`}
+                        className={`w-full h-11 p-3 outline-0 rounded-[5px] border-2 border-gray-700 bg-gray-500 text-white focus:ring-2 ring-emerald-400 transition-all duration-500 ${error && email === "" ? "border-red-500 transition-all duration-200" : "border-gray-500"}`}
                     />
                 </div>
                 <div className="w-full flex items-start justify-items-start flex-col mt-2">
@@ -44,7 +44,7 @@ function Cadastro() {
                         type="password" 
                         value={password}
                         onChange={(e)=> setPassword(e.target.value)}
-                        className={`w-full h-11 p-3 outline-0 rounded-[5px] border-2 border-gray-700 bg-gray-500 text-white ${error && password === "" ? "border-red-500 transition-all duration-200" : "border-gray-500"}`}
+                        className={`w-full h-11 p-3 outline-0 rounded-[5px] border-2 border-gray-700 bg-gray-500 text-white focus:ring-2 ring-emerald-400 transition-all duration-500 ${error && password === "" ? "border-red-500 transition-all duration-200" : "border-gray-500"}`}
                     />
                 </div>
                 <div className="w-full flex items-center justify-between text-white mt-2">

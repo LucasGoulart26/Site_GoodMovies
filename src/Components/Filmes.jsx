@@ -61,7 +61,7 @@ function Filmes() {
             ))}
         </div>
         <div className="w-full p-5 flex items-start justify-items-start flex-wrap gap-4">
-            <div className="w-full p-2">
+            <div className="w-full p-2 border-b-2 border-b-emerald-500">
                 <h1 className="text-3xl text-emerald-500">Filmes</h1>
             </div>
             {filmesFiltrados.map((filme) => (

@@ -2,10 +2,10 @@
 
 ## 🚀 Techs Used
 - React
-- Vite
-- Tailwindcss
+- Vite v7.3.1
+- Tailwindcss v4.2
 
-## Installation & Setup
+## 🛠️ Installation & Setup
 ```bash
 npm install
 # and
