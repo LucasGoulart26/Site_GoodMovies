@@ -12,6 +12,10 @@ import capaFilme10 from "../Img/Capas/capa-filme10.jpg";
 import capaFilme11 from "../Img/Capas/capa-filme11.jpg";
 import capaFilme12 from "../Img/Capas/capa-filme12.jpg";
 import capaFilme13 from "../Img/Capas/capa-filme13.jpg";
+import capaFilme14 from "../Img/Capas/capa-filme14.jpg";
+import capaFilme15 from "../Img/Capas/capa-filme15.jpg";
+import capaFilme16 from "../Img/Capas/capa-filme16.jpg";
+import NovosFilmes from "./NovosFilmes";
 import "../Css/Style.css";
 
 function Filmes() {
@@ -44,7 +48,10 @@ function Filmes() {
         {id: 10, ano: "2024", genero: "Aventura/Comédia", capa: capaFilme10},
         {id: 11, ano: "2020", genero: "Ação/Fantasia", capa: capaFilme11},
         {id: 12, ano: "2009", genero: "Drama", capa: capaFilme12},
-        {id: 13, ano: "2022", genero: "Ação/Crime", capa: capaFilme13}
+        {id: 13, ano: "2022", genero: "Ação/Crime", capa: capaFilme13},
+        {id: 14, ano: "2014", genero: "Ficção cientifica", capa: capaFilme14},
+        {id: 15, ano: "2023", genero: "Animação/Comédia", capa: capaFilme15},
+        {id: 16, ano: "2009", genero: "Ficção cientifica/Ação", capa: capaFilme16}
     ]
     const filmesFiltrados = active === "All" 
         ? filmes 
@@ -87,6 +94,7 @@ function Filmes() {
                 </div>
             ))}
         </div>
+        <NovosFilmes/>
         <div className="w-full h-20 flex items-center justify-center bg-zinc-950">
             <h1 className="text-2xl text-emerald-500">&copy;2026 - GoodMovies</h1>
         </div>

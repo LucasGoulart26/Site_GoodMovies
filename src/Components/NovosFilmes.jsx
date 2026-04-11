@@ -1,0 +1,30 @@
+import novoFilme1 from "../Img/NewMovies/capa-novofilme1.jpeg";
+
+function NovosFilmes() {
+    const novosFilme = [
+      {id: 1, capa: novoFilme1, titulo: "Avatar: Fogo e Cinzas", data: "18/12/2025"},
+      {id: 2, capa: novoFilme1, titulo: "Avatar: Fogo e Cinzas", data: "18/12/2025"}
+    ];
+    return (
+      <div className="w-full p-4 bg-zinc-900">
+        <div className="w-full border-b-2 border-emerald-500 p-2">
+          <h1 className="text-3xl text-emerald-500">Novos Filmes</h1>
+        </div>
+        <div className="w-full flex items-center justify-center mt-5">
+          <div className="w-full flex items-center justify-center flex-wrap gap-2">
+            {novosFilme.map((filmes) => (
+              <div key={filmes.id} className="w-60 flex items-start justify-items-start flex-col rounded-2xl cursor-pointer bg-zinc-950">
+                <img src={filmes.capa} alt="Capa" className="w-full h-50 bg-gray-600"/>
+                <div className="p-3">
+                  <h1 className=" text-white">{filmes.titulo}</h1>
+                  <h2 className="text-white">Lançamento: {filmes.data}</h2>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+}
+
+export default NovosFilmes
