@@ -1,9 +1,13 @@
-import novoFilme1 from "../Img/NewMovies/capa-novofilme1.jpeg";
+import novoFilme from "../Img/capa-novofilme.jpeg";
+import "../Css/Style.css";
 
 function NovosFilmes() {
     const novosFilme = [
-      {id: 1, capa: novoFilme1, titulo: "Avatar: Fogo e Cinzas", data: "18/12/2025"},
-      {id: 2, capa: novoFilme1, titulo: "Avatar: Fogo e Cinzas", data: "18/12/2025"}
+      {id: 1, capa: novoFilme, titulo: "Avatar: Fogo e Cinzas", data: "18/12/2025"},
+      {id: 2, capa: novoFilme, titulo: "Avatar: Fogo e Cinzas", data: "18/12/2025"},
+      {id: 3, capa: novoFilme, titulo: "Avatar: Fogo e Cinzas", data: "18/12/2025"},
+      {id: 4, capa: novoFilme, titulo: "Avatar: Fogo e Cinzas", data: "18/12/2025"},
+      {id: 5, capa: novoFilme, titulo: "Avatar: Fogo e Cinzas", data: "18/12/2025"},
     ];
     return (
       <div className="w-full p-4 bg-zinc-900">
@@ -13,7 +17,7 @@ function NovosFilmes() {
         <div className="w-full flex items-center justify-center mt-5">
           <div className="w-full flex items-center justify-center flex-wrap gap-2">
             {novosFilme.map((filmes) => (
-              <div key={filmes.id} className="w-60 flex items-start justify-items-start flex-col rounded-2xl cursor-pointer bg-zinc-950">
+              <div key={filmes.id} className="Card2 w-60 flex items-start justify-items-start flex-col rounded-2xl cursor-pointer bg-zinc-950">
                 <img src={filmes.capa} alt="Capa" className="w-full h-50 bg-gray-600"/>
                 <div className="p-3">
                   <h1 className=" text-white">{filmes.titulo}</h1>
