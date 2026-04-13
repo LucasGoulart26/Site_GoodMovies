@@ -95,7 +95,7 @@ function Filmes() {
             ))}
         </div>
         <NovosFilmes/>
-        <div className="w-full h-20 flex items-center justify-center bg-zinc-950">
+        <div className="w-full h-15 flex items-center justify-center bg-zinc-950">
             <h1 className="text-2xl text-emerald-500">&copy;2026 - GoodMovies</h1>
         </div>
       </div>
