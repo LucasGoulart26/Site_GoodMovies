@@ -10,9 +10,9 @@ function NovosFilmes() {
       {id: 5, capa: novoFilme, titulo: "Avatar: Fogo e Cinzas", data: "18/12/2025"},
     ];
     return (
-      <div className="w-full p-4 bg-zinc-900">
-        <div className="w-full border-b-2 border-emerald-500 p-2">
-          <h1 className="text-3xl text-emerald-500">Novos Filmes</h1>
+      <div className="w-full h-screen flex items-center justify-center flex-col bg-cover bg-[url('/src/Img/backgroundcinematic.jpg')]">
+        <div className="w-96 border-b-2 border-emerald-500 p-2">
+          <h1 className="text-3xl text-white text-center">Novos Filmes</h1>
         </div>
         <div className="w-full flex items-center justify-center mt-5">
           <div className="w-full flex items-center justify-center flex-wrap gap-2">
