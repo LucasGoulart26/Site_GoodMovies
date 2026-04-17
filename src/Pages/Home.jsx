@@ -2,6 +2,7 @@ import { useState } from "react";
 import Filmes from "../Components/Filmes";
 import Capa from "../Img/capa-do-filme.jpg";
 import { FaPlay } from "react-icons/fa";
+import { BiMoviePlay } from "react-icons/bi";
 import "../Css/Style.css";
 
 function Home() {
@@ -29,9 +30,13 @@ function Home() {
               <p className="text-2xl text-white">Avaliação: {estrelasAvaliacao(avaliacao)}</p>
             </div>
             <div className="w-full flex items-start justify-items-start gap-2 mt-2">
-              <button className="w-40 h-11 p-2 flex items-center justify-center gap-2 cursor-pointer text-emerald-500 bg-zinc-900 rounded-[5px] active:bg-zinc-950 transition-all duration-500">
+              <button className="w-40 h-11 p-2 flex items-center justify-center gap-2 cursor-pointer text-emerald-500 bg-zinc-900 rounded-[5px] active:bg-zinc-950 transition-all duration-500 border-2 border-zinc-700">
                 <FaPlay/>
                 ASSISTIR
+              </button>
+              <button className="w-40 h-11 p-2 flex items-center justify-center gap-2 cursor-pointer text-emerald-500 bg-zinc-900 rounded-[5px] active:bg-zinc-950 transition-all duration-500 border-2 border-zinc-700">
+                <BiMoviePlay className="text-2xl"/>
+                <a href="">TRAILER</a>
               </button>
             </div>
           </div>

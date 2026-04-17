@@ -79,7 +79,7 @@ function Filmes() {
         </div>
         <div className="w-full p-5 flex items-center justify-center flex-wrap gap-4">
             <div className="w-full p-2 border-b-2 border-b-emerald-500">
-                <h1 className="text-3xl text-emerald-500">Filmes</h1>
+                <h1 className="text-3xl text-white">Filmes</h1>
             </div>
             {filmesFiltrados.map((filme) => (
                 <div key={filme.id} className="CardFilme w-[24%] rounded-2xl bg-zinc-950 hover:shadow-2xl shadow-emerald-500 transition-all duration-300 ">
