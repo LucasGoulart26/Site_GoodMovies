@@ -27,9 +27,9 @@ function Filmes() {
         const estrelas = [];
         for(let i = 1; i <= 5; i++) {
             if(i <= nota) {
-                estrelas.push(<span className="text-yellow-400">★</span>);
+                estrelas.push(<span className="text-yellow-400 text-2xl">★</span>);
             }else {
-                estrelas.push(<span className="text-yellow-400">☆</span>);
+                estrelas.push(<span className="text-yellow-400 text-2xl">☆</span>);
             }
         }
         return estrelas;

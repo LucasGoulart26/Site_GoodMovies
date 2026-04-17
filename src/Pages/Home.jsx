@@ -12,9 +12,9 @@ function Home() {
         const estrelas = [];
         for (let i = 1; i <= 5; i++) {
             if (i <= nota) {
-                estrelas.push(<span className="text-2xl text-yellow-400">★</span>);
+              estrelas.push(<span className="text-yellow-400">★</span>);
             } else {
-                estrelas.push(<span className="text-2xl text-yellow-400">☆</span>);
+              estrelas.push(<span className="text-yellow-400">★</span>);
             }
         }
         return estrelas;
@@ -31,12 +31,10 @@ function Home() {
             </div>
             <div className="w-full flex items-start justify-items-start gap-2 mt-2">
               <button className="w-40 h-11 p-2 flex items-center justify-center gap-2 cursor-pointer text-emerald-500 bg-zinc-900 rounded-[5px] active:bg-zinc-950 transition-all duration-500 border-2 border-zinc-700">
-                <FaPlay/>
-                ASSISTIR
+                <FaPlay/>ASSISTIR
               </button>
               <button className="w-40 h-11 p-2 flex items-center justify-center gap-2 cursor-pointer text-emerald-500 bg-zinc-900 rounded-[5px] active:bg-zinc-950 transition-all duration-500 border-2 border-zinc-700">
-                <BiMoviePlay className="text-2xl"/>
-                <a href="">TRAILER</a>
+                <BiMoviePlay className="text-2xl"/>TRAILER
               </button>
             </div>
           </div>
