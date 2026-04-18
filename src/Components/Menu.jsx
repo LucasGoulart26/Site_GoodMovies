@@ -23,19 +23,10 @@ function Menu() {
             <IoSearch className="text-3xl" />
           </button>
         </div>
-        <div className="flex items-center justify-center gap-2">
-          <select className="w-21 p-2 bg-zinc-800 text-white rounded-[5px] outline-0 border-2 border-zinc-700 cursor-pointer">
-            <option value="">pt-BR</option>
-            <option value="">en-US</option>
-            <option value="">pt-PT</option>
-            <option value="">fr-FR</option>
-          </select>
-          <button className="w-11 h-11 flex items-center justify-center rounded-2xl bg-zinc-900 text-emerald-500 active:bg-zinc-800 transition-all duration-150 border-2 border-zinc-700">
-            <Link to="/cadastro">
-              <FaUserCircle className="text-2xl" />
-            </Link>
-          </button>
-        </div>
+        <button className="w-29 h-11 flex items-center justify-center gap-2 rounded-2xl bg-zinc-900 text-emerald-500 active:bg-zinc-800 transition-all duration-150 border-2 border-zinc-700">
+          <FaUserCircle className="text-2xl" />
+          <Link to="/cadastro">Cadastro</Link>
+        </button>
       </div>
     );
 }
