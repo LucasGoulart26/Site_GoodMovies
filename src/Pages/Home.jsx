@@ -30,10 +30,10 @@ function Home() {
               <p className="text-2xl text-white">Avaliação: {estrelasAvaliacao(avaliacao)}</p>
             </div>
             <div className="w-full flex items-start justify-items-start gap-2 mt-2">
-              <button className="w-40 h-11 p-2 flex items-center justify-center gap-2 cursor-pointer text-emerald-500 bg-zinc-900 rounded-[5px] active:bg-zinc-950 transition-all duration-500 border-2 border-zinc-700">
+              <button className="w-40 h-11 p-2 flex items-center justify-center gap-2 cursor-pointer text-white bg-zinc-900 rounded-[5px] active:bg-zinc-950 transition-all duration-500 border-2 border-zinc-700">
                 <FaPlay/>ASSISTIR
               </button>
-              <button className="w-40 h-11 p-2 flex items-center justify-center gap-2 cursor-pointer text-emerald-500 bg-zinc-900 rounded-[5px] active:bg-zinc-950 transition-all duration-500 border-2 border-zinc-700">
+              <button className="w-40 h-11 p-2 flex items-center justify-center gap-2 cursor-pointer text-white bg-zinc-900 rounded-[5px] active:bg-zinc-950 transition-all duration-500 border-2 border-zinc-700">
                 <BiMoviePlay className="text-2xl"/>TRAILER
               </button>
             </div>

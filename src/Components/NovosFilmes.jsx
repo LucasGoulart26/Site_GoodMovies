@@ -51,7 +51,7 @@ function NovosFilmes() {
     ];
     return (
       <div className="w-full h-screen flex items-center justify-center flex-col bg-cover bg-[url('/src/Img/backgroundcinematic.jpg')]">
-        <div className="w-[80%] border-b-2 border-emerald-500 p-2">
+        <div className="w-[80%] border-b-2 border-blue-500 p-2">
           <h1 className="text-3xl text-white">Novos Filmes</h1>
         </div>
         <div className="relative w-[80%] overflow-hidden mt-5">
@@ -67,10 +67,10 @@ function NovosFilmes() {
             ))}
           </div>
           <button onClick={prev} className="absolute left-0 top-1/2 -translate-y-1/2 bg-zinc-900 px-2 py-2 cursor-pointer">
-            <FaCaretLeft className="text-emerald-500 text-2xl"/>
+            <FaCaretLeft className="text-blue-500 text-2xl"/>
           </button>
           <button onClick={next} className="absolute right-0 top-1/2 -translate-y-1/2 bg-zinc-900 px-2 py-2 cursor-pointer">
-            <FaCaretRight className="text-emerald-500 text-2xl"/> 
+            <FaCaretRight className="text-blue-500 text-2xl"/> 
           </button>
         </div>
       </div>

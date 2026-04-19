@@ -73,16 +73,16 @@ function Filmes() {
                 <button 
                     key={btn} 
                     onClick={()=> setActive(btn)} 
-                    className={`w-24 p-3 rounded-2xl cursor-pointer text-black ${active === btn ? "bg-emerald-500" : "bg-zinc-800 text-white"}`}
+                    className={`w-27 p-3 rounded-2xl cursor-pointer text-black ${active === btn ? "bg-blue-500" : "bg-zinc-800 text-white"}`}
                 >{btn}</button>
             ))}
         </div>
         <div className="w-full p-5 flex items-center justify-center flex-wrap gap-4">
-            <div className="w-full p-2 border-b-2 border-b-emerald-500">
+            <div className="w-full p-2 border-b-2 border-b-blue-500">
                 <h1 className="text-3xl text-white">Filmes</h1>
             </div>
             {filmesFiltrados.map((filme) => (
-                <div key={filme.id} className="CardFilme w-[24%] rounded-2xl bg-zinc-950 hover:shadow-2xl shadow-emerald-500 transition-all duration-300 ">
+                <div key={filme.id} className="CardFilme w-[24%] rounded-2xl bg-zinc-950 hover:shadow-2xl shadow-blue-700 transition-all duration-300 ">
                     <img src={filme.capa} alt="Capa" className="w-full h-96"/>
                     <div className="p-3">
                         <div className="w-full flex items-center justify-between">
@@ -96,7 +96,7 @@ function Filmes() {
         </div>
         <NovosFilmes/>
         <div className="w-full h-15 flex items-center justify-center bg-zinc-950">
-            <h1 className="text-2xl text-emerald-500">&copy;2026 - GoodMovies</h1>
+            <h1 className="text-2xl text-white">&copy;2026 - GoodMovies</h1>
         </div>
       </div>
     );
